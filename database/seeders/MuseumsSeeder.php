@@ -28,7 +28,7 @@ class MuseumsSeeder extends Seeder
         // 3) Minimo 20 museos con mínimo 2 temáticas
         $museums->take(20)->each(function ($museum) use ($topics) {
             $museum->topics()->sync(
-                $topics->random(2)->pluck('id')->all()
+                $topics->random(3)->pluck('id')->all()
             );
         });
 

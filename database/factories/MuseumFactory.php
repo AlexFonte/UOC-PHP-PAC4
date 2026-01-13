@@ -17,6 +17,7 @@ class MuseumFactory extends Factory
      */
     public function definition(): array
     {
+        static $counter = 400; // para asegurar imagenes únicas
         return [
             'name' => $this->faker->unique()->company . ' Museum',
             'city' => $this->faker->unique()->city, // 1 museo por ciudad
@@ -24,7 +25,7 @@ class MuseumFactory extends Factory
             'visitguided' => $this->faker->randomElement(['sí', 'no']),
             'price' => $this->faker->randomFloat(2, 0, 30),
             // imagen única: usamos UUID para que no se repita nunca
-            'urlImg' => 'img/' . $this->faker->unique()->uuid . '.jpg',
+            'urlImg' => 'https://picsum.photos/id/' . ($counter++ ).'/2000/1200.webp',
         ];
     }
 }
