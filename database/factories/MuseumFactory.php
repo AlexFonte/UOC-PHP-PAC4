@@ -1,0 +1,30 @@
+<?php
+
+namespace Database\Factories;
+
+use Illuminate\Database\Eloquent\Factories\Factory;
+use App\Models\Museum;
+/**
+ * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Museum>
+ */
+class MuseumFactory extends Factory
+{
+    protected $model = Museum::class;
+    /**
+     * Define the model's default state.
+     *
+     * @return array<string, mixed>
+     */
+    public function definition(): array
+    {
+        return [
+            'name' => $this->faker->unique()->company . ' Museum',
+            'city' => $this->faker->unique()->city, // 1 museo por ciudad
+            'schedule' => $this->faker->sentence(8),
+            'visitguided' => $this->faker->randomElement(['sí', 'no']),
+            'price' => $this->faker->randomFloat(2, 0, 30),
+            // imagen única: usamos UUID para que no se repita nunca
+            'urlImg' => 'img/' . $this->faker->unique()->uuid . '.jpg',
+        ];
+    }
+}
