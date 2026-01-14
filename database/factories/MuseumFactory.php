@@ -21,7 +21,7 @@ class MuseumFactory extends Factory
         return [
             'name' => $this->faker->unique()->company . ' Museum',
             'city' => $this->faker->unique()->city, // 1 museo por ciudad
-            'schedule' => $this->faker->sentence(8),
+            'schedule' => $this->faker->sentence(3),
             'visitguided' => $this->faker->randomElement(['sí', 'no']),
             'price' => $this->faker->randomFloat(2, 0, 30),
             // imagen única: usamos UUID para que no se repita nunca
