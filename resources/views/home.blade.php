@@ -9,7 +9,8 @@
         <div class="max-w-7xl mx-auto px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-sm xs:rounded-lg rounded-md">
                 <div class="p-6 text-gray-900">
-                    <p>Bienvenido a la página principal. Llistdado de 5 museos random. Los 2 primeros son siempre fijos.</p>
+                    <p>Bienvenido a la página principal. Listado de 5 museos random. Los 2 primeros son siempre fijos.
+                    </p>
                 </div>
             </div>
         </div>
