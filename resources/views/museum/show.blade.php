@@ -27,12 +27,6 @@
                     @endforeach
                 </div>
 
-                {{--
-                <div class="mt-3">
-                    <strong>Temáticas:</strong>
-                    {{ $museum->topics->pluck('name')->join(', ') }}
-                </div> --}}
-
                 <div class="mt-2">
 
                     <a class="hover:underline text-sm" href="{{ url('/') }}">
